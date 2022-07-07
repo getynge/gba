@@ -40,6 +40,9 @@ pub mod prelude {
 
 pub mod mmio_types;
 
+#[cfg(all(target_arch = "arm", feature = "alloc"))]
+pub mod alloc;
+
 #[cfg(target_arch = "arm")]
 pub mod mmio_addresses;
 
